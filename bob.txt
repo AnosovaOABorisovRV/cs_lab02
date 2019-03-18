@@ -1,0 +1,336 @@
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob
+$ git clone  https://github.com/IvanovSE/cs-lab02.git <project>
+bash: syntax error near unexpected token `newline'
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob
+$ git clone  https://github.com/IvanovSE/cs-lab02.git project
+Cloning into 'project'...
+remote: Enumerating objects: 18, done.
+remote: Counting objects: 100% (18/18), done.
+remote: Compressing objects: 100% (14/14), done.
+remote: Total 18 (delta 2), reused 18 (delta 2), pack-reused 0
+Unpacking objects: 100% (18/18), done.
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob
+$ cd project
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master)
+$ git config user.name 'Bob (IvanovSE)'
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master)
+$ git config user.email 'bob@example.com'
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master)
+$ git add main.cpp
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master)
+$ git commit -m 'code: произвдение чисел'
+[master 6b9934c] code: произвдение чисел
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master)
+$ git log --oneline --decorate
+6b9934c (HEAD -> master) code: произвдение чисел
+6ea89d8 (origin/master, origin/HEAD) git: комитим gitignore
+25c3212 code: вывод суммы и разности чисел
+d80c5d7 code: добавили вывод суммы чисел
+6d0f2f6 code: добавили ввод a и b
+ca3612a build: комитим проэкт
+872234b code: заготовка программы
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master)
+$ git log --stat
+commit 6b9934ca09dcdc27599e12ba8ffbe9141c3b1f43 (HEAD -> master)
+Author: Bob (IvanovSE) <bob@example.com>
+Date:   Sun Mar 17 14:25:57 2019 +0300
+
+    code: произвдение чисел
+
+ main.cpp | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 6ea89d8ad3b228a4dc59020f96bd3330bdff9277 (origin/master, origin/HEAD)
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 16:09:19 2019 +0300
+
+    git: комитим gitignore
+
+ .gitignore | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 25c3212d8a00b4ac72d8e42a6e6ae5957810208e
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 15:57:20 2019 +0300
+
+    code: вывод суммы и разности чисел
+
+ main.cpp | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit d80c5d74bb970627c50b5e4d906dc3d935803ded
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 15:55:58 2019 +0300
+
+    code: добавили вывод суммы чисел
+
+ main.cpp | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 6d0f2f61b2f42533c9a579924ffafe667691a15d
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 15:52:05 2019 +0300
+
+    code: добавили ввод a и b
+
+ main.cpp | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+commit ca3612a9d8bad707532d701577c3e019a0319cb8
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 15:43:06 2019 +0300
+
+    build: комитим проэкт
+
+ project.cbp | 42 ++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 42 insertions(+)
+
+commit 872234bc996aa10522b547c67d8bf9933420b62e
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 14:56:27 2019 +0300
+
+    code: заготовка программы
+
+ main.cpp | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master)
+$ git log HEAD
+commit 6b9934ca09dcdc27599e12ba8ffbe9141c3b1f43 (HEAD -> master)
+Author: Bob (IvanovSE) <bob@example.com>
+Date:   Sun Mar 17 14:25:57 2019 +0300
+
+    code: произвдение чисел
+
+commit 6ea89d8ad3b228a4dc59020f96bd3330bdff9277 (origin/master, origin/HEAD)
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 16:09:19 2019 +0300
+
+    git: комитим gitignore
+
+commit 25c3212d8a00b4ac72d8e42a6e6ae5957810208e
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 15:57:20 2019 +0300
+
+    code: вывод суммы и разности чисел
+
+commit d80c5d74bb970627c50b5e4d906dc3d935803ded
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 15:55:58 2019 +0300
+
+    code: добавили вывод суммы чисел
+
+commit 6d0f2f61b2f42533c9a579924ffafe667691a15d
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 15:52:05 2019 +0300
+
+    code: добавили ввод a и b
+
+commit ca3612a9d8bad707532d701577c3e019a0319cb8
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 15:43:06 2019 +0300
+
+    build: комитим проэкт
+
+commit 872234bc996aa10522b547c67d8bf9933420b62e
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 14:56:27 2019 +0300
+
+    code: заготовка программы
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master)
+$ git show HEAD
+commit 6b9934ca09dcdc27599e12ba8ffbe9141c3b1f43 (HEAD -> master)
+Author: Bob (IvanovSE) <bob@example.com>
+Date:   Sun Mar 17 14:25:57 2019 +0300
+
+    code: произвдение чисел
+
+diff --git a/main.cpp b/main.cpp
+index 36fcbdd..07f7677 100644
+--- a/main.cpp
++++ b/main.cpp
+@@ -8,5 +8,6 @@ int main()
+     int a, b;
+     cin >> a >> b;
+     cout << "A + B = " << a + b << '\n'
+-    << "A - B = " << a - b << '\n';
++    << "A - B = " << a - b << '\n'
++    << "A * B = " << a * b << '\n';
+ }
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master)
+$ git remote add origin https://github.com/IvanovSE/cs-lab02.git
+fatal: remote origin already exists.
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master)
+$ git push -u origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 413 bytes | 137.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/IvanovSE/cs-lab02.git
+   6ea89d8..6b9934c  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master)
+$ git push
+Everything up-to-date
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master)
+$ git log -oneline --decorate --all --graph
+fatal: unrecognized argument: -oneline
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master)
+$ git log --oneline --decorate --all --graph
+* 6b9934c (HEAD -> master, origin/master, origin/HEAD) code: произвдение чисел
+* 6ea89d8 git: комитим gitignore
+* 25c3212 code: вывод суммы и разности чисел
+* d80c5d7 code: добавили вывод суммы чисел
+* 6d0f2f6 code: добавили ввод a и b
+* ca3612a build: комитим проэкт
+* 872234b code: заготовка программы
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master)
+$ git pull --ff-only
+Already up to date.
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master)
+$ git fetch
+remote: Enumerating objects: 13, done.
+remote: Counting objects: 100% (13/13), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 9 (delta 3), reused 9 (delta 3), pack-reused 0
+Unpacking objects: 100% (9/9), done.
+From https://github.com/IvanovSE/cs-lab02
+   6b9934c..752c0aa  master     -> origin/master
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master)
+$ git log --oneline --decorate --all --graph
+* 752c0aa (origin/master, origin/HEAD) code: частное чисел
+*   81a0b41 code: частное чисел
+|\
+| * 6b9934c (HEAD -> master) code: произвдение чисел
+* | 7eb002a code: деление чисел
+|/
+* 6ea89d8 git: комитим gitignore
+* 25c3212 code: вывод суммы и разности чисел
+* d80c5d7 code: добавили вывод суммы чисел
+* 6d0f2f6 code: добавили ввод a и b
+* ca3612a build: комитим проэкт
+* 872234b code: заготовка программы
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master)
+$ git fetch
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master)
+$ git fetch
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master)
+$ git add main.cpp
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master)
+$ git commit -m 'code: печать минимума'
+[master e4413ca] code: печать минимума
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master)
+$ git push
+To https://github.com/IvanovSE/cs-lab02.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/IvanovSE/cs-lab02.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master)
+$ git fetch
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/IvanovSE/cs-lab02
+   752c0aa..f452628  master     -> origin/master
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master)
+$ git log --oneline --decorate --all --graph
+* e4413ca (HEAD -> master) code: печать минимума
+| * f452628 (origin/master, origin/HEAD) code: вывод максимума
+| * 752c0aa code: частное чисел
+| *   81a0b41 code: частное чисел
+| |\
+| |/
+|/|
+* | 6b9934c code: произвдение чисел
+| * 7eb002a code: деление чисел
+|/
+* 6ea89d8 git: комитим gitignore
+* 25c3212 code: вывод суммы и разности чисел
+* d80c5d7 code: добавили вывод суммы чисел
+* 6d0f2f6 code: добавили ввод a и b
+* ca3612a build: комитим проэкт
+* 872234b code: заготовка программы
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master)
+$ git rebase origin/master
+First, rewinding head to replay your work on top of it...
+Applying: code: печать минимума
+Using index info to reconstruct a base tree...
+M       main.cpp
+Falling back to patching base and 3-way merge...
+Auto-merging main.cpp
+CONFLICT (content): Merge conflict in main.cpp
+error: Failed to merge in the changes.
+hint: Use 'git am --show-current-patch' to see the failed patch
+Patch failed at 0001 code: печать минимума
+Resolve all conflicts manually, mark them as resolved with
+"git add/rm <conflicted_files>", then run "git rebase --continue".
+You can instead skip this commit: run "git rebase --skip".
+To abort and get back to the state before "git rebase", run "git rebase --abort".
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master|REBASE 1/1)
+$ git add main.cpp
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master|REBASE 1/1)
+$ git rebase --continue
+Applying: code: печать минимума
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/bob/project (master)
+$  git log --oneline --decorate --all --graph
+* 1b093d2 (HEAD -> master) code: печать минимума
+* f452628 (origin/master, origin/HEAD) code: вывод максимума
+* 752c0aa code: частное чисел
+*   81a0b41 code: частное чисел
+|\
+| * 6b9934c code: произвдение чисел
+* | 7eb002a code: деление чисел
+|/
+* 6ea89d8 git: комитим gitignore
+* 25c3212 code: вывод суммы и разности чисел
+* d80c5d7 code: добавили вывод суммы чисел
+* 6d0f2f6 code: добавили ввод a и b
+* ca3612a build: комитим проэкт
+* 872234b code: заготовка программы
