@@ -1,0 +1,953 @@
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02
+$ cd alice
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice
+$ cd project
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project
+$ cd..
+bash: cd..: command not found
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project
+$ cd ..
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice
+$ cd project
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project
+$ get init
+bash: get: command not found
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project
+$ git init
+Initialized empty Git repository in C:/Users/iappl/OneDrive/Документы/прога 2 сем/lab02/alice/it/
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git config user.name 'Alice (IvanovSE)'
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git config user.email 'iapple1976@gmail.com'
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        bin/
+        main.cpp
+        obj/
+        project.cbp
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git add main.cpp
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   main.cpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        bin/
+        obj/
+        project.cbp
+
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git commit -m 'code: заготовка программы'
+[master (root-commit) 872234b] code: заготовка программы
+ 1 file changed, 9 insertions(+)
+ create mode 100644 main.cpp
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git add project.cbp
+warning: LF will be replaced by CRLF in project.cbp.
+The file will have its original line endings in your working directory
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git commit git commit -m 'build: комитим проэкт'
+error: pathspec 'git' did not match any file(s) known to git
+error: pathspec 'commit' did not match any file(s) known to git
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git commit -m 'build: комитим проэкт'
+[master ca3612a] build: комитим проэкт
+ 1 file changed, 42 insertions(+)
+ create mode 100644 project.cbp
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   main.cpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        bin/
+        obj/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git add main.cpp
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git commit -m 'code: добавили ввод a и b'
+[master 6d0f2f6] code: добавили ввод a и b
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git add -u
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git commit -m "code: добавили вывод суммы чисел"
+[master d80c5d7] code: добавили вывод суммы чисел
+ 1 file changed, 1 insertion(+)
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git commit -a -m "code: вывод суммы и разности чисел"
+[master 25c3212] code: вывод суммы и разности чисел
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        obj/
+        project.depend
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        project.depend
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git add .gitignore
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git commit -m 'git: комитим gitignore'
+[master 6ea89d8] git: комитим gitignore
+ 1 file changed, 2 insertions(+)
+ create mode 100644 .gitignore
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git log --stat
+commit 6ea89d8ad3b228a4dc59020f96bd3330bdff9277 (HEAD -> master)
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 16:09:19 2019 +0300
+
+    git: комитим gitignore
+
+ .gitignore | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 25c3212d8a00b4ac72d8e42a6e6ae5957810208e
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 15:57:20 2019 +0300
+
+    code: вывод суммы и разности чисел
+
+ main.cpp | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit d80c5d74bb970627c50b5e4d906dc3d935803ded
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 15:55:58 2019 +0300
+
+    code: добавили вывод суммы чисел
+
+ main.cpp | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 6d0f2f61b2f42533c9a579924ffafe667691a15d
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 15:52:05 2019 +0300
+
+    code: добавили ввод a и b
+
+ main.cpp | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+commit ca3612a9d8bad707532d701577c3e019a0319cb8
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 15:43:06 2019 +0300
+
+    build: комитим проэкт
+
+ project.cbp | 42 ++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 42 insertions(+)
+
+commit 872234bc996aa10522b547c67d8bf9933420b62e
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 14:56:27 2019 +0300
+
+    code: заготовка программы
+
+ main.cpp | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+(END)
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit d80c5d74bb970627c50b5e4d906dc3d935803ded
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 15:55:58 2019 +0300
+
+    code: добавили вывод суммы чисел
+
+ main.cpp | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 6d0f2f61b2f42533c9a579924ffafe667691a15d
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 15:52:05 2019 +0300
+
+    code: добавили ввод a и b
+
+ main.cpp | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+commit ca3612a9d8bad707532d701577c3e019a0319cb8
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 15:43:06 2019 +0300
+
+    build: комитим проэкт
+
+ project.cbp | 42 ++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 42 insertions(+)
+
+commit 872234bc996aa10522b547c67d8bf9933420b62e
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 14:56:27 2019 +0300
+
+    code: заготовка программы
+
+ main.cpp | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git log --oneline --decorate
+6ea89d8 (HEAD -> master) git: комитим gitignore
+25c3212 code: вывод суммы и разности чисел
+d80c5d7 code: добавили вывод суммы чисел
+6d0f2f6 code: добавили ввод a и b
+ca3612a build: комитим проэкт
+872234b code: заготовка программы
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git log --oneline --decorate --all --graph
+* 6ea89d8 (HEAD -> master) git: комитим gitignore
+* 25c3212 code: вывод суммы и разности чисел
+* d80c5d7 code: добавили вывод суммы чисел
+* 6d0f2f6 code: добавили ввод a и b
+* ca3612a build: комитим проэкт
+* 872234b code: заготовка программы
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git log --grep "code:"
+commit 25c3212d8a00b4ac72d8e42a6e6ae5957810208e
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 15:57:20 2019 +0300
+
+    code: вывод суммы и разности чисел
+
+commit d80c5d74bb970627c50b5e4d906dc3d935803ded
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 15:55:58 2019 +0300
+
+    code: добавили вывод суммы чисел
+
+commit 6d0f2f61b2f42533c9a579924ffafe667691a15d
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 15:52:05 2019 +0300
+
+    code: добавили ввод a и b
+
+commit 872234bc996aa10522b547c67d8bf9933420b62e
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 14:56:27 2019 +0300
+
+    code: заготовка программы
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git log --grep "build:"
+commit ca3612a9d8bad707532d701577c3e019a0319cb8
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 15:43:06 2019 +0300
+
+    build: комитим проэкт
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git log -- project.cbp
+commit ca3612a9d8bad707532d701577c3e019a0319cb8
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 15:43:06 2019 +0300
+
+    build: комитим проэкт
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git show HEAD
+commit 6ea89d8ad3b228a4dc59020f96bd3330bdff9277 (HEAD -> master)
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 16:09:19 2019 +0300
+
+    git: комитим gitignore
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..4c7473d
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,2 @@
++/bin
++/obj
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git show master
+commit 6ea89d8ad3b228a4dc59020f96bd3330bdff9277 (HEAD -> master)
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 16:09:19 2019 +0300
+
+    git: комитим gitignore
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..4c7473d
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,2 @@
++/bin
++/obj
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git show HEAD~1
+commit 25c3212d8a00b4ac72d8e42a6e6ae5957810208e
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 15:57:20 2019 +0300
+
+    code: вывод суммы и разности чисел
+
+diff --git a/main.cpp b/main.cpp
+index 4364dbc..36fcbdd 100644
+--- a/main.cpp
++++ b/main.cpp
+@@ -7,5 +7,6 @@ int main()
+     cout << "Enter A and B: ";
+     int a, b;
+     cin >> a >> b;
+-    cout << "A + B = " << a + b << '\n';
++    cout << "A + B = " << a + b << '\n'
++    << "A - B = " << a - b << '\n';
+ }
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git show master~1
+commit 25c3212d8a00b4ac72d8e42a6e6ae5957810208e
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 15:57:20 2019 +0300
+
+    code: вывод суммы и разности чисел
+
+diff --git a/main.cpp b/main.cpp
+index 4364dbc..36fcbdd 100644
+--- a/main.cpp
++++ b/main.cpp
+@@ -7,5 +7,6 @@ int main()
+     cout << "Enter A and B: ";
+     int a, b;
+     cin >> a >> b;
+-    cout << "A + B = " << a + b << '\n';
++    cout << "A + B = " << a + b << '\n'
++    << "A - B = " << a - b << '\n';
+ }
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git show ^C
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git show 25c3212d8a00b4ac72d8e42a6e6ae5957810208e
+commit 25c3212d8a00b4ac72d8e42a6e6ae5957810208e
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sat Mar 16 15:57:20 2019 +0300
+
+    code: вывод суммы и разности чисел
+
+diff --git a/main.cpp b/main.cpp
+index 4364dbc..36fcbdd 100644
+--- a/main.cpp
++++ b/main.cpp
+@@ -7,5 +7,6 @@ int main()
+     cout << "Enter A and B: ";
+     int a, b;
+     cin >> a >> b;
+-    cout << "A + B = " << a + b << '\n';
++    cout << "A + B = " << a + b << '\n'
++    << "A - B = " << a - b << '\n';
+ }
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git diff
+diff --git a/main.cpp b/main.cpp
+index 36fcbdd..07f7677 100644
+--- a/main.cpp
++++ b/main.cpp
+@@ -8,5 +8,6 @@ int main()
+     int a, b;
+     cin >> a >> b;
+     cout << "A + B = " << a + b << '\n'
+-    << "A - B = " << a - b << '\n';
++    << "A - B = " << a - b << '\n'
++    << "A * B = " << a * b << '\n';
+ }
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git diff HEAD~2
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..4c7473d
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,2 @@
++/bin
++/obj
+diff --git a/main.cpp b/main.cpp
+index 4364dbc..07f7677 100644
+--- a/main.cpp
++++ b/main.cpp
+@@ -7,5 +7,7 @@ int main()
+     cout << "Enter A and B: ";
+     int a, b;
+     cin >> a >> b;
+-    cout << "A + B = " << a + b << '\n';
++    cout << "A + B = " << a + b << '\n'
++    << "A - B = " << a - b << '\n'
++    << "A * B = " << a * b << '\n';
+ }
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git diff HEAD~2 HEAD
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..4c7473d
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,2 @@
++/bin
++/obj
+diff --git a/main.cpp b/main.cpp
+index 4364dbc..36fcbdd 100644
+--- a/main.cpp
++++ b/main.cpp
+@@ -7,5 +7,6 @@ int main()
+     cout << "Enter A and B: ";
+     int a, b;
+     cin >> a >> b;
+-    cout << "A + B = " << a + b << '\n';
++    cout << "A + B = " << a + b << '\n'
++    << "A - B = " << a - b << '\n';
+ }
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git diff 872234b 25c3212
+diff --git a/main.cpp b/main.cpp
+index b4392ec..36fcbdd 100644
+--- a/main.cpp
++++ b/main.cpp
+@@ -4,6 +4,9 @@ using namespace std;
+
+ int main()
+ {
+-    cout << "Hello world!" << endl;
+-    return 0;
++    cout << "Enter A and B: ";
++    int a, b;
++    cin >> a >> b;
++    cout << "A + B = " << a + b << '\n'
++    << "A - B = " << a - b << '\n';
+ }
+diff --git a/project.cbp b/project.cbp
+new file mode 100644
+index 0000000..ad8f6e9
+--- /dev/null
++++ b/project.cbp
+@@ -0,0 +1,42 @@
++<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
++<CodeBlocks_project_file>
++       <FileVersion major="1" minor="6" />
++       <Project>
++               <Option title="project" />
++               <Option pch_mode="2" />
++               <Option compiler="gcc" />
++               <Build>
++                       <Target title="Debug">
++                               <Option output="bin/Debug/project" prefix_auto="1" extension_auto="1" />
++                               <Option object_output="obj/Debug/" />
++                               <Option type="1" />
++                               <Option compiler="gcc" />
++                               <Compiler>
++                                       <Add option="-g" />
++                               </Compiler>
++                       </Target>
++                       <Target title="Release">
++                               <Option output="bin/Release/project" prefix_auto="1" extension_auto="1" />
++                               <Option object_output="obj/Release/" />
++                               <Option type="1" />
++                               <Option compiler="gcc" />
++                               <Compiler>
++                                       <Add option="-O2" />
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git commit -m 'code: вывод произведения'
+On branch master
+Changes not staged for commit:
+        modified:   main.cpp
+
+Untracked files:
+        project.depend
+
+no changes added to commit
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git log --oneline --decorate
+6ea89d8 (HEAD -> master) git: комитим gitignore
+25c3212 code: вывод суммы и разности чисел
+d80c5d7 code: добавили вывод суммы чисел
+6d0f2f6 code: добавили ввод a и b
+ca3612a build: комитим проэкт
+872234b code: заготовка программы
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git add main.cpp
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git commit -m 'code: произдвдение чисел'
+[master c39eb68] code: произдвдение чисел
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git log --oneline --decorate
+c39eb68 (HEAD -> master) code: произдвдение чисел
+6ea89d8 git: комитим gitignore
+25c3212 code: вывод суммы и разности чисел
+d80c5d7 code: добавили вывод суммы чисел
+6d0f2f6 code: добавили ввод a и b
+ca3612a build: комитим проэкт
+872234b code: заготовка программы
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git reset --hard HEAD~1
+HEAD is now at 6ea89d8 git: комитим gitignore
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git checkout HEAD -- main.cpp
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git remote add origin https://github.com/IvanovSE/cs-lab02.git
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git push -u origin master
+
+
+
+
+
+
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com': remote: Anonymous access to IvanovSE/cs-lab02.git denied.
+fatal: Authentication failed for 'https://github.com/IvanovSE/cs-lab02.git/'
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git remote add origin https://github.com/IvanovSE/cs-lab02.git
+fatal: remote origin already exists.
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git push -u origin master
+Enumerating objects: 18, done.
+Counting objects: 100% (18/18), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (18/18), 2.34 KiB | 184.00 KiB/s, done.
+Total 18 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/IvanovSE/cs-lab02.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git remote -v
+origin  https://github.com/IvanovSE/cs-lab02.git (fetch)
+origin  https://github.com/IvanovSE/cs-lab02.git (push)
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ ^C
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git fetch
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/IvanovSE/cs-lab02
+   6ea89d8..6b9934c  master     -> origin/master
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git status
+On branch master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   project.cbp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        project.depend
+        project.layout
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git add main.cpp
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git commit -m 'code: деление чисел'
+[master 7eb002a] code: деление чисел
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git push
+To https://github.com/IvanovSE/cs-lab02.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/IvanovSE/cs-lab02.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git pull --ff-only
+fatal: Not possible to fast-forward, aborting.
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git pull--ff -only
+git: 'pull--ff' is not a git command. See 'git --help'.
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git pull -ff-only
+error: did you mean `--ff-only` (with two dashes ?)
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git pull --ff-only
+fatal: Not possible to fast-forward, aborting.
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git log --oneline --decorate --all --graph
+* 7eb002a (HEAD -> master) code: деление чисел
+| * 6b9934c (origin/master) code: произвдение чисел
+|/
+* 6ea89d8 git: комитим gitignore
+* 25c3212 code: вывод суммы и разности чисел
+* d80c5d7 code: добавили вывод суммы чисел
+* 6d0f2f6 code: добавили ввод a и b
+* ca3612a build: комитим проэкт
+* 872234b code: заготовка программы
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git pull --ff-only
+fatal: Not possible to fast-forward, aborting.
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git push
+To https://github.com/IvanovSE/cs-lab02.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/IvanovSE/cs-lab02.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git pull
+Auto-merging main.cpp
+CONFLICT (content): Merge conflict in main.cpp
+Automatic merge failed; fix conflicts and then commit the result.
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master|MERGING)
+$ git show HEAD
+commit 7eb002a5ec26869d72b216ff555374cd08d3542c (HEAD -> master)
+Author: Alice (IvanovSE) <iapple1976@gmail.com>
+Date:   Sun Mar 17 14:44:52 2019 +0300
+
+    code: деление чисел
+
+diff --git a/main.cpp b/main.cpp
+index 36fcbdd..8368d31 100644
+--- a/main.cpp
++++ b/main.cpp
+@@ -8,5 +8,6 @@ int main()
+     int a, b;
+     cin >> a >> b;
+     cout << "A + B = " << a + b << '\n'
+-    << "A - B = " << a - b << '\n';
++    << "A - B = " << a - b << '\n'
++    << "A / B = " << a / b << '\n';
+ }
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master|MERGING)
+$ cd project
+bash: cd: project: No such file or directory
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master|MERGING)
+$ git pull
+error: Pulling is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master|MERGING)
+$ git add main.cpp
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master|MERGING)
+$ git commit -m 'code: частное чисел'
+[master 81a0b41] code: частное чисел
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git rebase origin/master
+error: cannot rebase: You have unstaged changes.
+error: Please commit or stash them.
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git add main.cpp
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git rebase --continue
+fatal: No rebase in progress?
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git rebase origin/master
+error: cannot rebase: You have unstaged changes.
+error: additionally, your index contains uncommitted changes.
+error: Please commit or stash them.
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git commit -m 'code: частное чисел'
+[master 752c0aa] code: частное чисел
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git rebase origin/master
+error: cannot rebase: You have unstaged changes.
+error: Please commit or stash them.
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git log --oneline --decorate --all --graph
+* 752c0aa (HEAD -> master) code: частное чисел
+*   81a0b41 code: частное чисел
+|\
+| * 6b9934c (origin/master) code: произвдение чисел
+* | 7eb002a code: деление чисел
+|/
+* 6ea89d8 git: комитим gitignore
+* 25c3212 code: вывод суммы и разности чисел
+* d80c5d7 code: добавили вывод суммы чисел
+* 6d0f2f6 code: добавили ввод a и b
+* ca3612a build: комитим проэкт
+* 872234b code: заготовка программы
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git branch
+* master
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git branch master
+fatal: A branch named 'master' already exists.
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git add main.cpp
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git pusj
+git: 'pusj' is not a git command. See 'git --help'.
+
+The most similar command is
+        push
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git push
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 1.14 KiB | 232.00 KiB/s, done.
+Total 9 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+To https://github.com/IvanovSE/cs-lab02.git
+   6b9934c..752c0aa  master -> master
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git add main.cpp
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git commit -m 'code: частное'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+        modified:   project.cbp
+
+Untracked files:
+        project.depend
+        project.layout
+
+no changes added to commit
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git push
+Everything up-to-date
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git add main.cpp
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git commit -m 'code: вывод максимума'
+[master f452628] code: вывод максимума
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 446 bytes | 223.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/IvanovSE/cs-lab02.git
+   752c0aa..f452628  master -> master
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git branch double
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git checkout double
+Switched to branch 'double'
+M       project.cbp
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (double)
+$ git add main.cpp
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (double)
+$ git commit -m 'code: дабл'
+[double 23b3b12] code: дабл
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (double)
+$ git checkout master
+Switched to branch 'master'
+M       project.cbp
+Your branch is up to date with 'origin/master'.
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git fetch master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git fetch
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git log --oneline --decorate
+f452628 (HEAD -> master, origin/master) code: вывод максимума
+752c0aa code: частное чисел
+81a0b41 code: частное чисел
+7eb002a code: деление чисел
+6b9934c code: произвдение чисел
+6ea89d8 git: комитим gitignore
+25c3212 code: вывод суммы и разности чисел
+d80c5d7 code: добавили вывод суммы чисел
+6d0f2f6 code: добавили ввод a и b
+ca3612a build: комитим проэкт
+872234b code: заготовка программы
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git merge double
+Updating f452628..23b3b12
+Fast-forward
+ main.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+iappl@DESKTOP-BR3BCSQ MINGW32 ~/OneDrive/Документы/прога 2 сем/lab02/alice/project (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 368 bytes | 184.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/IvanovSE/cs-lab02.git
+   f452628..23b3b12  master -> master
+
